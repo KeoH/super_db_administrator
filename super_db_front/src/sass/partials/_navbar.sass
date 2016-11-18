@@ -93,8 +93,13 @@
 .navDropdownListItem
   height: 2em
   .navDropdownListItemLink
+    padding-top: .5em
     display: block
     height: 100%
     padding-left: 2em
     color: $ligth_gray
     text-decoration: none
+  &.active
+    .navDropdownListItemLink
+      background-color: $medium3_gray
+      color: white

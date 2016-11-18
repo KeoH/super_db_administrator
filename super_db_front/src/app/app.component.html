@@ -25,12 +25,12 @@
       </div>
     </div>
   </div>
-  <div class="MenuToogle" id="toogleMenu">
+  <div class="MenuToogle" id="toogleMenu" (click)="toogleMenu()">
     <i class="fa fa-chevron-left" aria-hidden="true"></i>
   </div>
 </header>
 <section class="MainContent">
-  <nav id="navMenu" class="MainNav">
+  <nav id="navMenu" class="MainNav" [ngClass]='{"hide" : !menuOpen}'>
     <div class="navProfile">
       <div class="Photo">
         <img src="https://api.adorable.io/avatars/120/keoh@adorable.io.png" alt="">
@@ -42,43 +42,43 @@
     </div>
     <div class="navContent">
       <ul class="navList">
-        <li class="navListItem">
-          <a href="#" class="navListItemLink">
+        <li class="navListItem" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">
+          <a [routerLink]="['']" class="navListItemLink" (click)="toogleMenu()">
             <i class="fa fa-television"></i>
             Dashboard
           </a>
         </li>
-        <li class="navListItem active">
-          <a href="#" class="navListItemLink">
+        <li class="navListItem" routerLinkActive="active">
+          <a routerLink="projects"  class="navListItemLink">
             <i class="fa fa-flask"></i>
             Projects
           </a>
           <ul class="navDropdownList">
-            <li class="navDropdownListItem">
-              <a href="#" class="navDropdownListItemLink">Proyecto 1</a>
+            <li class="navDropdownListItem" routerLinkActive="active">
+              <a [routerLink]="['projects', 'project1']" class="navDropdownListItemLink" (click)="toogleMenu()">Proyecto 1</a>
             </li>
-            <li class="navDropdownListItem">
-              <a href="#" class="navDropdownListItemLink">Proyecto 2</a>
+            <li class="navDropdownListItem" routerLinkActive="active">
+              <a [routerLink]="['projects', 'project2']" class="navDropdownListItemLink" (click)="toogleMenu()">Proyecto 2</a>
             </li>
-            <li class="navDropdownListItem">
-              <a href="#" class="navDropdownListItemLink">Proyecto 3</a>
+            <li class="navDropdownListItem" routerLinkActive="active">
+              <a [routerLink]="['projects', 'project3']" class="navDropdownListItemLink" (click)="toogleMenu()">Proyecto 3</a>
             </li>
           </ul>
         </li>
-        <li class="navListItem">
-          <a href="#" class="navListItemLink">
+        <li class="navListItem" routerLinkActive="active">
+          <a routerLink="calendar" class="navListItemLink" (click)="toogleMenu()">
             <i class="fa fa-calendar"></i>
             Calendar
           </a>
         </li>
-        <li class="navListItem">
-          <a href="#" class="navListItemLink">
+        <li class="navListItem" routerLinkActive="active">
+          <a routerLink="graphs" class="navListItemLink" (click)="toogleMenu()">
             <i class="fa fa-area-chart"></i>
             Graphs
           </a>
         </li>
-        <li class="navListItem">
-          <a href="#" class="navListItemLink">
+        <li class="navListItem" routerLinkActive="active">
+          <a routerLink="configuration" class="navListItemLink" (click)="toogleMenu()">
             <i class="fa fa-gears"></i>
             Configuration
           </a>
@@ -87,23 +87,6 @@
     </div>
   </nav>
   <section class="Content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus aspernatur suscipit eaque, illum explicabo molestiae, architecto excepturi tempora praesentium consequuntur, sequi impedit eligendi ex ipsam modi corporis officiis quo nemo.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quo, possimus vel eos vero eveniet numquam! Distinctio nemo omnis impedit voluptatum, veritatis totam perspiciatis tempore iste dolorum repudiandae, suscipit cumque.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus dolorum dicta ex amet odio, soluta, quaerat ad voluptates, eius, mollitia pariatur adipisci animi cumque necessitatibus assumenda ipsam hic cum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum unde eligendi blanditiis magni dolores quibusdam quos asperiores nihil, placeat earum minus, nemo delectus distinctio fugiat harum architecto id nisi! Tempora!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus aspernatur suscipit eaque, illum explicabo molestiae, architecto excepturi tempora praesentium consequuntur, sequi impedit eligendi ex ipsam modi corporis officiis quo nemo.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quo, possimus vel eos vero eveniet numquam! Distinctio nemo omnis impedit voluptatum, veritatis totam perspiciatis tempore iste dolorum repudiandae, suscipit cumque.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus dolorum dicta ex amet odio, soluta, quaerat ad voluptates, eius, mollitia pariatur adipisci animi cumque necessitatibus assumenda ipsam hic cum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum unde eligendi blanditiis magni dolores quibusdam quos asperiores nihil, placeat earum minus, nemo delectus distinctio fugiat harum architecto id nisi! Tempora!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus aspernatur suscipit eaque, illum explicabo molestiae, architecto excepturi tempora praesentium consequuntur, sequi impedit eligendi ex ipsam modi corporis officiis quo nemo.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quo, possimus vel eos vero eveniet numquam! Distinctio nemo omnis impedit voluptatum, veritatis totam perspiciatis tempore iste dolorum repudiandae, suscipit cumque.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus dolorum dicta ex amet odio, soluta, quaerat ad voluptates, eius, mollitia pariatur adipisci animi cumque necessitatibus assumenda ipsam hic cum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum unde eligendi blanditiis magni dolores quibusdam quos asperiores nihil, placeat earum minus, nemo delectus distinctio fugiat harum architecto id nisi! Tempora!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus aspernatur suscipit eaque, illum explicabo molestiae, architecto excepturi tempora praesentium consequuntur, sequi impedit eligendi ex ipsam modi corporis officiis quo nemo.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quo, possimus vel eos vero eveniet numquam! Distinctio nemo omnis impedit voluptatum, veritatis totam perspiciatis tempore iste dolorum repudiandae, suscipit cumque.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur minus dolorum dicta ex amet odio, soluta, quaerat ad voluptates, eius, mollitia pariatur adipisci animi cumque necessitatibus assumenda ipsam hic cum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum unde eligendi blanditiis magni dolores quibusdam quos asperiores nihil, placeat earum minus, nemo delectus distinctio fugiat harum architecto id nisi! Tempora!</p>
-
-
+    <router-outlet></router-outlet>
   </section>
 </section>
